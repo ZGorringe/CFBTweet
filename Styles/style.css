@@ -1,0 +1,42 @@
+html {
+	font-size: 62.5%;
+	background: black;
+	font-family: copperplate, sans-serif;
+}
+
+.mainPageContainer {
+	border: 1px red solid;
+	width: 100%;
+	height: auto;
+}
+
+.topSpacer {
+	border: 1px red solid;
+	height: 20rem;
+}
+
+.mainContent {
+	font-size: 15rem;
+	color: white;
+	text-align: center;
+	margin-bottom: 5rem;
+}
+
+.teamIconContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+img {
+	height: 50px;
+	width: auto;
+	margin: 1rem;
+}
+
+.bottomContent {
+	font-size: 5rem;
+	color: gray;
+	text-align: center;
+	margin-top: 5rem;
+}
