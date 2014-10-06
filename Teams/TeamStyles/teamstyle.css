@@ -70,28 +70,9 @@ html {
 	margin-bottom: 5rem;
 }
 
-.teamIconContainer {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-img {
-	height: 50px;
-	width: auto;
-	margin: 1rem;
-	border-radius: 1rem;
-}
-
-img:hover {
-	border: white 2px solid;
-	cursor: pointer;
-}
-
-
 .bottomContent {
 	font-size: 5rem;
 	color: rgba(137,137,137, .50);
-	text-align: center;
 	margin-top: 5rem;
+	float: left;
 }

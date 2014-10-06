@@ -5,16 +5,29 @@
 		<title>College Football Tweet</title>
 		<link rel="stylesheet" type="text/css" href="styles/style.css">
 	</head>
-	<body>
+	<body ng-controller="mainCtrl">
 		<div class="mainPageContainer">
-			<div class="topSpacer"></div>
-			<div class="mainContent"><strong>CFB</strong>|tweet</div>
-			<div class="teamIconContainer">
-				<div class="teamIconContent1"><img src="http://upload.wikimedia.org/wikipedia/en/thumb/b/be/Utah_Utes_logo.svg/249px-Utah_Utes_logo.svg.png"></div>
-				<div class="teamIconContent2"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Utah_State_Aggies_Logo.svg/460px-Utah_State_Aggies_Logo.svg.png"></div>
-				<div class="teamIconContent3"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/16/BYU_Athletic_Logo.svg/432px-BYU_Athletic_Logo.svg.png"></div>
+			<div class="topSpacer">
+				<div class="topContent">
+					<div class="matchupLink">Choose Matchup</div>
+					<div>|</div>
+					<div class="mediaLink">Media Members</div>
+					<div>|</div>
+					<div class="searchLink">Search</div>
+					<div>|</div>
+					<div class="userLink">Login/Sign-up</div>
+				</div>
 			</div>
-			<div class="bottomContent">Connect With Your Team</div>
+			<div ng-view></div>
 		</div>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.js"></script>
+		<script src="app.js"></script>
+		<script src="js/controllers/mainCtrl.js"></script>
+		<script src="js/services/mainService.js"></script>
+		<script src="home/homeCtrl.js"></script>
+		<script src="home/homeService.js"></script>
+		<script src="teams/teamCtrl.js"></script>
+		<script src="teams/teamService.js"></script>
 	</body>
 </html>
