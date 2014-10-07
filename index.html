@@ -1,40 +1,35 @@
 <!DOCTYPE html> 
-<html lang="en">
+<html lang="en" ng-app="cfbTweet">
 	<head>
 		<meta charset="utf-8">
 		<title>College Football Tweet</title>
 		<link rel="stylesheet" type="text/css" href="styles/style.css">
 	</head>
-	<body ng-controller="mainCtrl">
-		<div class="mainPageContainer">
+	<body>
+		<div ng-controller="mainCtrl" class="mainPageContainer">
 			<div class="topSpacer">
 				<div class="topContent">
-					<div class="matchupLink">Choose Matchup</div>
+					<div class="matchupLink"><a href="/#/matchup">Choose Matchup</a></div>
 					<div>|</div>
-					<div class="mediaLink">Media Members</div>
+					<div class="mediaLink"><a href="/#/media">Media Members</a></div>
 					<div>|</div>
 					<div class="searchLink">Search</div>
 					<div>|</div>
-					<div class="userLink">Login/Sign-up</div>
+					<div class="userLink" ng-click="loginWithTwitter()">Login</div>
 				</div>
 			</div>
-			<div class="mainContent"><strong>CFB</strong>|tweet</div>
-			<div class="teamIconContainer">
-				<div class="utahIcon"><a href="/#/teams/utahutes"><img src="http://upload.wikimedia.org/wikipedia/en/thumb/b/be/Utah_Utes_logo.svg/249px-Utah_Utes_logo.svg.png"></a></div>
-				<div class="utahStateIcon"><a href="/#/teams/utahstateaggies"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Utah_State_Aggies_Logo.svg/460px-Utah_State_Aggies_Logo.svg.png"></a></div>
-				<div class="byuIcon"><a href="/#/teams/byucougars"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/16/BYU_Athletic_Logo.svg/432px-BYU_Athletic_Logo.svg.png"></a></div>
-			</div>
-			<div class="bottomContent">#ConnectWithYourTeam</div>
-			<div ng-view></div>
 		</div>
+		<div ng-view></div>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.js"></script>
+		<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+		<script src="https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js"></script>
+		<script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
 		<script src="app.js"></script>
 		<script src="js/controllers/mainCtrl.js"></script>
+		<script src="js/controllers/teamCtrl.js"></script>
+		<script src="js/controllers/mediaCtrl.js"></script>
+		<script src="js/controllers/matchupCtrl.js"></script>
 		<script src="js/services/mainService.js"></script>
-		<script src="home/homeCtrl.js"></script>
-		<script src="home/homeService.js"></script>
-		<script src="teams/teamCtrl.js"></script>
-		<script src="teams/teamService.js"></script>
 	</body>
 </html>

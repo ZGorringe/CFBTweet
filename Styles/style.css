@@ -21,6 +21,16 @@ html {
 	color: rgba(137,137,137, .50);
 }
 
+.homeLink {
+	margin-right: 2rem;
+	transition: color .3s ease;
+}
+
+.homeLink:hover {
+	color: white;
+	cursor: pointer;
+}
+
 .matchupLink {
 	margin-right: 2rem;
 	transition: color .3s ease;
@@ -94,4 +104,25 @@ img:hover {
 	color: rgba(137,137,137, .50);
 	text-align: center;
 	margin-top: 5rem;
+}
+
+.homeButton {
+	font-size: 3rem;
+	color: rgba(137,137,137, .50);
+	margin-top: 5rem;
+	margin-left:;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+a {
+	text-decoration: none;
+	color: rgba(137,137,137, .50);
+	transition: color .3s ease;
+}
+
+a:hover {
+	color: white;
+	cursor: pointer;
 }
