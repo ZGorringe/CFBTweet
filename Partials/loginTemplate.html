@@ -1,0 +1,23 @@
+<div class="mainContent"><strong>Login</strong></div>
+<div class=>
+    <a href="" ng-click="showReg()">{{status}}</a>
+    <div ng-show="!reg">
+        <h2>Login</h2>
+        <form ng-submit="login()">
+            <p ng-show="error">{{ error }}</p>
+            <input type="email" placeholder="Email" ng-model="details.email" required><br>
+            <input type="password" placeholder="Password" ng-model="details.password" required><br>
+            <input type="submit" value="Sign In">
+        </form>
+    </div>
+    <div ng-show="reg">
+        <h2>Register</h2>
+        <form ng-submit="register()">
+            <p ng-show="error">{{ error }}</p>
+            <input type="text" placeholder="Full Name" ng-model="details.name" required /><br />
+            <input type="email" placeholder="Email" ng-model="details.email" required /><br />
+            <input type="password" placeholder="Password" ng-model="details.password" required /><br />
+            <input type="submit" value="Register" />
+        </form>
+    </div>
+</div>

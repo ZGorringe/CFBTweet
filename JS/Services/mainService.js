@@ -1,31 +1,19 @@
 var app = angular.module('cfbTweet');
 
-app.service('mainService', function($scope, $firebase, $q, $http) {
+app.service('mainService', function ($http, $q) {
 
-	// this.getData = function() {
-	// 	return $http({
-	// 		method: 'GET',
-	// 		url: 'https://api.twitter.com/1.1/search/tweets.json?q=%universityofutah'
-	// 	})
-	// 	.then(function(data) {
-	// 		return data.data.results;
-	// 	})
-	// }
-
-	// var ref = new Firebase("https://cfb-tweet.firebaseio.com/");
-
-	// var auth = new FirebaseSimpleLogin(chatRef, function(error, user) {
- //  		if (error) {
- //    // an error occurred while attempting login
- //    		alert(error);
- //  		} else if (user) {
- //    // user authenticated with Firebase
- //    		alert('User ID: ' + user.id + ', Provider: ' + user.provider);
- //  		} else {
- //    // user is logged out
- //  		}
-	// });
-
-	// auth.login('twitter');
+	this.getUtahData = function(utah) {
+		var deferred = $q.defer();
+		$http ({
+			method: 'GET',
+			url: 'https://api.twitter.com/1.1/search/tweets.json?q=%universityofutah',
+			crossDomain: true
+		}).then(function(data){ 
+			var teamData = data.data.results;
+			deferred.resolve(teamData);
+			console.log(teamData);
+		});
+		return deferred.promise;
+	};
 
 })

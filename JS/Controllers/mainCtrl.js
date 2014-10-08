@@ -1,16 +1,21 @@
 var app = angular.module('cfbTweet');
 
-app.controller('mainCtrl', function($scope, $firebase, $firebaseSimpleLogin) {
+app.controller('mainCtrl', function ($scope, $firebase, loginService, mainService) {
 
-	var ref = new Firebase("https://cfb-tweet.firebaseio.com");
-  	var authClient = $firebaseSimpleLogin(ref);
+  	$scope.login = function () {
+  		return loginService.loginWithTwitter();
+  	}
 
-  	$scope.loginWithTwitter = function() {
-      authClient.$login("twitter").then(function(user) {
-      console.log("Logged in as: " + user.uid);
-    }, function(error) {
-      console.error("Login failed: " + error);
-    });
-  }
+  	$scope.getUtah = function () {
+  		debugger;
+  		mainService.getUtahData($scope.utah)
+  		.then(function(data) {
+  			$scope.teamData = teamSorter(data);
+  		})
+  	}
+
+  	// $scope.loggedIn = function () {
+  	// 	return loginService.checkAuth();
+  	// }
 
 });

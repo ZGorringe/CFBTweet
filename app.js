@@ -24,6 +24,10 @@ app.config(['$routeProvider',
 			when('/matchup', {
 				templateUrl: 'partials/matchupTemplate.html',
 				controller: 'matchupCtrl'
+			// }).
+			// when('/login', {
+			// 	templateUrl: 'partials/loginTemplate.html',
+			// 	controller: 'loginCtrl'
 			}).
 			otherwise ({
 				redirectTo: 'partials/homeTemplate.html'
