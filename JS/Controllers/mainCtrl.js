@@ -1,17 +1,21 @@
 var app = angular.module('cfbTweet');
 
+var userObj;
+
 app.controller('mainCtrl', function ($scope, $firebase, loginService, mainService) {
 
   	$scope.login = function () {
-  		return loginService.loginWithTwitter();
+      loginService.loginWithTwitter()
+        .then(function (user) {
+          return userObj = user;
+      });
   	}
 
   	$scope.getUtah = function () {
-  		debugger;
-  		mainService.getUtahData($scope.utah)
-  		.then(function(data) {
-  			$scope.teamData = teamSorter(data);
-  		})
+  		mainService.getUtahData(userObj)
+    		.then(function(data) {
+    			$scope.teamData = teamSorter(data);
+    		})
   	}
 
   	// $scope.loggedIn = function () {
