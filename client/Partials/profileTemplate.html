@@ -1,0 +1,15 @@
+<body ng-controller="loginCtrl">
+	<navbar>
+			<% include ./navbarTemplate.html %>
+	</navbar>
+	<div class="mainContent"><strong>Profile</strong>
+		<div class="profileContainter">
+			<p>
+               	<strong>id</strong>: <%= user.twitter.id %><br>
+                <strong>token</strong>: <%= user.twitter.token %><br>
+                <strong>username</strong>: <%= user.twitter.username %><br>
+                <strong>displayName</strong>: <%= user.twitter.displayName %><br>
+            </p>
+		</div>
+	</div>
+</body>	

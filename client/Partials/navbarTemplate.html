@@ -1,0 +1,18 @@
+<div ng-controller="mainCtrl" class="mainPageContainer">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<div class="topSpacer">
+		<div class="topContent">
+			<div class="matchupLink"><a href="/#/matchup"><button type="submit">Choose Matchup</button></a></div>
+			<div>|</div>
+			<div class="mediaLink"><a href="/#/media"><button type="submit">Media Members</button></a></div>
+			<div>|</div>
+			<div class="searchLink"><button type="submit">Search</button></div>
+			<div>|</div>
+			<div class="homeLink"><a href="/home"><button type="submit">Home</button></a></div>
+			<div>|</div>
+			<div class="userLink"><a href="/profile"><button type="submit">Profile</button></a></div>
+			<div class="userInfo">Logged in as: <%= user.twitter.displayName %></div>
+		</div>
+	</div>
+</div>

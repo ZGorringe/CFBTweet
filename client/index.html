@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+
+<html lang="en" ng-app="cfbTweet">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>College Football Tweet</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	</head>
+	<body>
+		<navbar>
+			<% include ./Partials/navbarTemplate %>
+		</navbar>
+		<div ng-controller="mainCtrl" class="mainPageContainer">
+			<div class="topSpacer">
+				<div class="topContent">
+					<div class="matchupLink"><a href="/#/matchup"><button type="submit">Choose Matchup</button></a></div>
+					<div>|</div>
+					<div class="mediaLink"><a href="/#/media"><button type="submit">Media Members</button></a></div>
+					<div>|</div>
+					<div class="searchLink"><a href="/search"><button type="submit">Search</button></a></div>
+					<div>|</div>
+					<div class="homeLink"><a href="/"><button type="submit">Home</button></a></div>
+					<div>|</div>
+					<div class="userLink"><a href="/profile"><button type="submit">Profile</button></a></div>
+					<div class="userProfile"></div>
+				</div>
+			</div>
+		</div>
+		<div ng-view></div>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-animate.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-cookies.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-resource.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-sanitize.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-touch.js"></script>
+		<script src="app.js"></script>
+		<script src="js/controllers/mainCtrl.js"></script>
+		<script src="js/controllers/teamCtrl.js"></script>
+		<script src="js/controllers/mediaCtrl.js"></script>
+		<script src="js/controllers/matchupCtrl.js"></script>
+		<script src="js/controllers/loginCtrl.js"></script>
+		<script src="js/services/mainService.js"></script>
+		<script src="js/services/loginService.js"></script>
+	</body>
+</html>

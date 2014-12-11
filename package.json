@@ -1,0 +1,48 @@
+{
+  "name": "CFBTweet",
+  "version": "1.0.0",
+  "description": "CFBTweet ========",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZGorringe/CFBTweet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZGorringe/CFBTweet/issues"
+  },
+  "homepage": "https://github.com/ZGorringe/CFBTweet",
+  "dependencies": {
+    "bcrypt-nodejs": "latest",
+    "body-parser": "~1.0.0",
+    "composable-middleware": "^0.3.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^0.4.1",
+    "cookie-parser": "~1.0.0",
+    "debug": "~2.0.0",
+    "ejs": "^1.0.0",
+    "express": "^4.0.0",
+    "express-jwt": "^0.1.3",
+    "express-session": "~1.0.0",
+    "jsonwebtoken": "^0.3.0",
+    "method-override": "~1.0.0",
+    "mongoose": "~3.8.1",
+    "morgan": "~1.0.0",
+    "passport": "~0.1.17",
+    "passport-facebook": "~1.0.2",
+    "passport-google-oauth": "~0.1.5",
+    "passport-http-oauth": "^0.1.3",
+    "passport-local": "~0.1.6",
+    "passport-oauth": "latest",
+    "passport-twitter": "~1.0.2",
+    "send": "^0.10.1",
+    "twitter": "^0.2.13"
+  },
+  "devDependencies": {
+    "jshint-stylish": "~0.1.5"
+  }
+}
